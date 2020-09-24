@@ -1,7 +1,7 @@
 {
-  "name": "unit10hw",
+  "name": "NODE.js CLI Team Generator",
   "version": "1.0.0",
-  "description": "OOP and testing for week 10 homework",
+  "description": "With user input from command line, html that displays team menbers and their role will be created",
   "main": "app.js",
   "directories": {
     "lib": "lib",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stevetrilogy/unit10hw.git"
+    "url": "https://github.com/etorres-revature/NODE.js-CLI_Team_Generator"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Eric D. Torres",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/stevetrilogy/unit10hw/issues"
   },
-  "homepage": "https://github.com/stevetrilogy/unit10hw#readme",
+  "homepage": "https://etorres-revature.github.io/Responsive_Portfolio/",
   "dependencies": {
     "inquirer": "^6.3.1"
   },
