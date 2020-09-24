@@ -1,0 +1,31 @@
+body {
+    background-color: #DCDCDC;
+}
+
+.jumbotron {
+    background-image: url("../assets/jumbotron/team-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #000;
+    position: relative;
+    overflow: hidden;
+    height: 275px;
+}
+
+.card-header {
+    background-color: #FFB6C1;
+}
+
+.manager-card {
+    background-color: yellowgreen;
+}
+
+.engineer-card {
+    background-color: sienna;
+}
+
+.intern-card {
+    background-color: peru;
+}
+
