@@ -1,5 +1,5 @@
 {
-  "name": "NODE.js CLI Team Generator",
+  "name": "node.js_cli_team_generator",
   "version": "1.0.0",
   "description": "With user input from command line, html that displays team menbers and their role will be created",
   "main": "app.js",
