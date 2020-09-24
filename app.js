@@ -9,6 +9,7 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
+const { inherits } = require("util");
 
 const teamMembers = [];
 
@@ -130,17 +131,15 @@ function diffEmployee() {
       if (confirm.nextEmp) {
         newEmployee();
       } else {
-          console.log(teamMembers)
+        console.log(teamMembers);
+        // render.employees = teamMembers;
+        fs.existsSync(OUTPUT_DIR) || fs.mkdirSync(OUTPUT_DIR);
+        fs.writeFileSync(outputPath, render(teamMembers), "utf8");
       }
     });
 }
 
-function init() {
-  managerInfo();
-  render(teamMembers);
-}
-
-init();
+managerInfo();
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
