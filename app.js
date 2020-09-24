@@ -12,7 +12,7 @@ const render = require("./lib/htmlRenderer");
 
 const teamMembers = [];
 
-let teamName;
+let teamName = "";
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
@@ -47,6 +47,7 @@ function managerInfo() {
       },
     ])
     .then((manager) => {
+      teamName = manager.teamName;
       manager = new Manager(
         manager.managerName,
         manager.managerID,
@@ -54,59 +55,91 @@ function managerInfo() {
         manager.managerOfficeNumber
       );
       teamMembers.push(manager);
-      teamName = manager.teamName;
       newEmployee();
     });
 }
 function newEmployee() {
-    inquirer
+  inquirer
     .prompt([
-        {
-            type: "list",
-            name: "role",
-            message: "What is the next employee's role?",
-            choices: ["Intern", "Engineer"]
-        },
-        {
-            type: "input", 
-            name: "empName",
-            message: "Please enter the employee's name."
-        },
-        {
-            type: "input", 
-            name: "empID", 
-            message: "Please enter the employee's EmployeeID."
-        },
-        {
-            type: "input",
-            name: "empEmail",
-            message: "Please enter the employee's e-mail address.",
-            choices: ["Intern", "Engineer"]
-        },
-        {
-            type: "input", 
-            name: "github", 
-            message: "Please enter the engineers's GitHub profile.", 
-            when: (userInput) => userInput.role === "Engineer"
-        },
-        {
-            type: "input", 
-            name: "school", 
-            message: "Please enter the name of the Intern's school.", 
-            when: (userInput) => userInput.role = "Intern"
-        }, 
-
-    ]).then(employee => {
-        if (employee.role === "Intern") {
-            teamMembers.push(new Intern(employee.empName, employee.empID, employee.empEmail, employee.school))
-        } else {
-            teamMembers.push(new Engineer(employee.empName, employee.empID, employee.Email, employee.github ))
-        }
-    })
+      {
+        type: "list",
+        name: "role",
+        message: "What is the next employee's role?",
+        choices: ["Engineer", "Intern"],
+      },
+      {
+        type: "input",
+        name: "empName",
+        message: "Please enter the employee's name.",
+      },
+      {
+        type: "input",
+        name: "empID",
+        message: "Please enter the employee's EmployeeID.",
+      },
+      {
+        type: "input",
+        name: "empEmail",
+        message: "Please enter the employee's e-mail address.",
+        choices: ["Intern", "Engineer"],
+      },
+      {
+        type: "input",
+        name: "github",
+        message: "Please enter the engineers's GitHub profile.",
+        when: (userInput) => userInput.role === "Engineer",
+      },
+      {
+        type: "input",
+        name: "school",
+        message: "Please enter the name of the Intern's school.",
+        when: (userInput) => userInput.role === "Intern",
+      },
+    ])
+    .then((employee) => {
+      if (employee.role === "Intern") {
+        teamMembers.push(
+          new Intern(
+            employee.empName,
+            employee.empID,
+            employee.empEmail,
+            employee.school
+          )
+        );
+      } else {
+        teamMembers.push(
+          new Engineer(
+            employee.empName,
+            employee.empID,
+            employee.empEmail,
+            employee.github
+          )
+        );
+      }
+      diffEmployee();
+    });
 }
 
+function diffEmployee() {
+  inquirer
+    .prompt([
+      {
+        type: "confirm",
+        name: "nextEmp",
+        message: "Enter information for another team member?",
+      },
+    ])
+    .then((confirm) => {
+      if (confirm.nextEmp) {
+        newEmployee();
+      } else {
+        console.log(teamName);
+        console.log(teamMembers);
+      }
+    });
+}
 
-managerInfo(); 
+managerInfo();
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
