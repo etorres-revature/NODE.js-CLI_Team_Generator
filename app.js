@@ -14,9 +14,6 @@ const teamMembers = [];
 
 let teamName = "";
 
-// Write code to use inquirer to gather information about the development team members,
-// and to create objects for each team member (using the correct classes as blueprints!)
-
 function managerInfo() {
   inquirer
     .prompt([
@@ -133,13 +130,21 @@ function diffEmployee() {
       if (confirm.nextEmp) {
         newEmployee();
       } else {
-        console.log(teamName);
-        console.log(teamMembers);
+          console.log(teamMembers)
       }
     });
 }
 
-managerInfo();
+function init() {
+  managerInfo();
+  render(teamMembers);
+}
+
+init();
+
+// Write code to use inquirer to gather information about the development team members,
+// and to create objects for each team member (using the correct classes as blueprints!)
+
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
