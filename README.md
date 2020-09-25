@@ -29,6 +29,20 @@ Clone the GitHub repository.  And, run the file in VSCode.
 
 Type in "node app.js" in the terminal command line.  Follow the prompts.
 
+Here are :movie_camera: **VIDEOS** :movie_camera: that display how to use the application.
+
+1. ***TDD objects*** walk through:
+
+[![NODE.js Team Generator TDD and objects walkthrough](./assets/screenshots/node-readme-generator-code-walkthru.png)](https://drive.google.com/file/d/1-5g2f1hu2p9JgxFP0swWfORr0UT1qxiH/preview)
+
+2. ***CODE*** walk through
+
+[![NODE.js Team Generator code walkthrough](./assets/screenshots/node-readme-generator-github-walkthru.png)](https://drive.google.com/file/d/1UD69e-JgbeNv0Lj3TA2DM035MUbEXroW/preview)
+
+3. ***PROMPTS*** walk through:
+
+[![NODE.js Team Generator prompts walkthrough](./assets/screenshots/team-generator-output.png)](https://drive.google.com/file/d/1mCWiGtIQt86MC2ZJZ9Mdawig9_QAmudG/preview)
+
 ## Guidelines for Contributing
 
 If you want to contibute or have suggestions for new features, please use the e-mail address below.
@@ -89,3 +103,5 @@ You can contact me by e-mail at etorresnotary@gmail.com for any additional quest
 This application usese the **MIT License**.
 
 **[This README.md file generated with my NODE.js README Generator app.](https://github.com/etorres-revature/NODEjs_README.md_Generator)
+
+[![NODE.js Team Generator README file walk through](./assets/screenshots/node-readme-generator-github-walkthru.png)](https://drive.google.com/file/d/1LGKYbJt7UtEHoSaaAxcgMDwrLPF_hvGg/preview)
