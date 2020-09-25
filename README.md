@@ -100,7 +100,7 @@ You can contact me by e-mail at etorresnotary@gmail.com for any additional quest
 
 ##### License
 
-This application usese the **MIT License**.
+This application uses the **MIT License**.
 
 **[This README.md file generated with my NODE.js README Generator app.](https://github.com/etorres-revature/NODEjs_README.md_Generator)**
 
