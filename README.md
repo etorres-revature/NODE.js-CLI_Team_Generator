@@ -102,6 +102,6 @@ You can contact me by e-mail at etorresnotary@gmail.com for any additional quest
 
 This application usese the **MIT License**.
 
-**[This README.md file generated with my NODE.js README Generator app.](https://github.com/etorres-revature/NODEjs_README.md_Generator)
+**[This README.md file generated with my NODE.js README Generator app.](https://github.com/etorres-revature/NODEjs_README.md_Generator)**
 
-[![NODE.js Team Generator README file walk through](./assets/screenshots/node-readme-generator-github-walkthru.png)](https://drive.google.com/file/d/1LGKYbJt7UtEHoSaaAxcgMDwrLPF_hvGg/preview)
+[![NODE.js Team Generator README file walk through](./assets/screenshots/team-generator-README.png)](https://drive.google.com/file/d/1LGKYbJt7UtEHoSaaAxcgMDwrLPF_hvGg/preview)
