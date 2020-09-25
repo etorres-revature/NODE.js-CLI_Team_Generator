@@ -33,11 +33,11 @@ Here are :movie_camera: **VIDEOS** :movie_camera: that display how to use the ap
 
 1. ***TDD objects*** walk through:
 
-[![NODE.js Team Generator TDD and objects walkthrough](./assets/screenshots/node-readme-generator-code-walkthru.png)](https://drive.google.com/file/d/1-5g2f1hu2p9JgxFP0swWfORr0UT1qxiH/preview)
+[![NODE.js Team Generator TDD and objects walkthrough](./assets/screenshots/team-generator-TDD-objects.png)](https://drive.google.com/file/d/1-5g2f1hu2p9JgxFP0swWfORr0UT1qxiH/preview)
 
 2. ***CODE*** walk through
 
-[![NODE.js Team Generator code walkthrough](./assets/screenshots/node-readme-generator-github-walkthru.png)](https://drive.google.com/file/d/1UD69e-JgbeNv0Lj3TA2DM035MUbEXroW/preview)
+[![NODE.js Team Generator code walkthrough](./assets/screenshots/team-generator-app.js-functionality.png)](https://drive.google.com/file/d/1UD69e-JgbeNv0Lj3TA2DM035MUbEXroW/preview)
 
 3. ***PROMPTS*** walk through:
 
