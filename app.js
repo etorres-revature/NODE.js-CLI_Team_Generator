@@ -18,11 +18,11 @@ const teamMembers = [];
 function managerInfo() {
   inquirer
     .prompt([
-    //   {
-    //     type: "input",
-    //     name: "teamName",
-    //     message: "Plese enter a name/title for your team.",
-    //   },
+      //   {
+      //     type: "input",
+      //     name: "teamName",
+      //     message: "Plese enter a name/title for your team.",
+      //   },
       {
         type: "input",
         name: "managerName",
@@ -45,7 +45,7 @@ function managerInfo() {
       },
     ])
     .then((manager) => {
-    //   teamName = manager.teamName;
+      //   teamName = manager.teamName;
       manager = new Manager(
         manager.managerName,
         manager.managerID,
