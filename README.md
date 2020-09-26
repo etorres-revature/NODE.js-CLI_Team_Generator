@@ -7,7 +7,7 @@
 
 This application creates team templates with information input through prompts in the command line.
 
-This project has been updated to include validation on the Inquirer prompts.  In the ./lib there is a Validation object that is exported to ./app.js.  The Validation object is tested with Validation.test.js file in ./test folder.  
+This project has been updated to include validation on the Inquirer prompts.  In the ./lib folder there is a Validation object (Validtion.js) filethat is exported to the app.js file to create the validations on the Inquirer prompts.  The Validation object is tested with Validation.test.js file in ./test folder.  
 
 ## Table of Contents
 
