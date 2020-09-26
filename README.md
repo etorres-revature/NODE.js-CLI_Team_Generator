@@ -94,7 +94,7 @@ Separation of formating and content also makes it feasible to present the same m
 
 This *NODE.js CLI Team Generator* was built by :green_heart: Eric D. Torres :green_heart:
 
-Special **THANKS** to [VincentDoria](https://github.com/Cenzo-cmd) and [Shane Schilling](https://github.com/trilambda122) for their efforts in assiting me on this project.  
+Special **THANKS** to [Vincent Doria](https://github.com/Cenzo-cmd) and [Shane Schilling](https://github.com/trilambda122) for their efforts in assiting me on this project.  
 
 ## Questions
 
