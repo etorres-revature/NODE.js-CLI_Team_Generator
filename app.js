@@ -1,6 +1,7 @@
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
+const Validate = require("./lib/Validation");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
@@ -13,6 +14,7 @@ const render = require("./lib/htmlRenderer");
 const { inherits, isNull } = require("util");
 
 const teamMembers = [];
+const validator = new Validate();
 
 // let teamName = "";
 
@@ -28,25 +30,25 @@ function managerInfo() {
         type: "input",
         name: "managerName",
         message: "Please enter the name of the manager of this project.",
-        validate: validateNull,
+        validate: validator.validateNull,
       },
       {
         type: "input",
         name: "managerID",
         message: "Enter the manager's EmployeeID",
-        validate: validateNullAndNumber,
+        validate: validator.validateNullAndNumber,
       },
       {
         type: "input",
         name: "managerEmail",
         message: "Please enter the manager's e-mail address.",
-        validate: validateEMail,
+        validate: validator.validateEMail,
       },
       {
         type: "input",
         name: "managerOfficeNumber",
         message: "Please enter the manager's office number.",
-        validate: validateNullAndNumber,
+        validate: validator.validateNullAndNumber,
       },
     ])
     .then((manager) => {
@@ -75,34 +77,34 @@ function newEmployee() {
         type: "input",
         name: "empName",
         message: "Please enter the employee's name.",
-        validate: validateNull,
+        validate: validator.validateNull,
       },
       {
         type: "input",
         name: "empID",
         message: "Please enter the employee's EmployeeID.",
-        validate: validateNullAndNumber,
+        validate: validator.validateNullAndNumber,
       },
       {
         type: "input",
         name: "empEmail",
         message: "Please enter the employee's e-mail address.",
         choices: ["Intern", "Engineer"],
-        validate: validateEMail,
+        validate: validator.validateEMail,
       },
       {
         type: "input",
         name: "github",
         message: "Please enter the engineers's GitHub profile.",
         when: (userInput) => userInput.role === "Engineer",
-        validate: validateNull,
+        validate: validator.validateNull,
       },
       {
         type: "input",
         name: "school",
         message: "Please enter the name of the Intern's school.",
         when: (userInput) => userInput.role === "Intern",
-        validate: validateNull,
+        validate: validator.validateNull,
       },
     ])
     .then((employee) => {
@@ -136,7 +138,7 @@ function diffEmployee() {
         type: "confirm",
         name: "nextEmp",
         message: "Enter information for another team member?",
-        validate: validateConfirm,
+        validate: validator.validateConfirm,
       },
     ])
     .then((confirm) => {
@@ -151,45 +153,7 @@ function diffEmployee() {
     });
 }
 
-const validateNull = (input) => {
-  if (input === "") {
-    return `You MUST enter something to continue.`;
-  } else {
-    return true;
-  }
-};
-
-const validateNullAndNumber = (input) => {
-  // re = /^\d*$/;
-  if (input === "") {
-    return `You MUST enter something to continue.`;
-  } else if (isNaN(input)) {
-    return `You MUST enter a whole number value.`;
-  } else {
-    return true;
-  }
-};
-
-const validateEMail = (input) => {
-  if (validEMail.validate(input)) {
-    return true;
-  } else {
-    return `You MUST enter a valid e-mail address including the "@" symbol and a top-level domain (TLD; such as, ".com"; ".net"; ".edu"; etc.)`;
-  }
-};
-
-const validateConfirm = (input) => {
-  if (input !== "y" || input !== "n") {
-    return `Please input a 'y' or 'n' to continue`;
-  } else {
-    return true;
-  }
-}
-
-
 managerInfo();
-
-module.exports("app.js")
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
