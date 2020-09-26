@@ -21,6 +21,7 @@
   },
   "homepage": "https://etorres-revature.github.io/Responsive_Portfolio/",
   "dependencies": {
+    "email-validator": "^2.0.4",
     "inquirer": "^6.3.1"
   },
   "devDependencies": {
