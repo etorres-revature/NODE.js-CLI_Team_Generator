@@ -33,7 +33,7 @@ Type in "node app.js" in the terminal command line.  Follow the prompts.
 
 Here are :movie_camera: **VIDEOS** :movie_camera: that display how to use the application.
 
-1. ***TDD OBJECTS*** walk through:
+1. ***TDD/OBJECTS*** walk through:
 
 [![NODE.js Team Generator TDD and objects walkthrough](./assets/screenshots/team-generator-TDD-objects.png)](https://drive.google.com/file/d/1-5g2f1hu2p9JgxFP0swWfORr0UT1qxiH/preview)
 
