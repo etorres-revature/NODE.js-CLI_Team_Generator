@@ -1,4 +1,4 @@
-//uses require funciton to bring in Validation 
+//uses require function to bring in Validation 
 const Validate = require("../lib/Validation");
 
 //test for validateNull function
