@@ -29,27 +29,14 @@ body {
     background-color: peru;
 }
 
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-    text-decoration: none;
-}
-
-.fa:hover {
+img:hover {
     opacity: .65;
 }
 
-.fa-linkedin {
-    background: #007bb5;
-    color: white;
-    margin-right: 5px;
-}
-
-.fa-github {
-    background: #2c4762;
-    color: white;
-    margin-left: 5px;
+img {
+    height: 75px;
+    width: 75px;
+    margin-left: 35px;
 }
 
 #copyright {
