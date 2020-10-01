@@ -118,7 +118,6 @@ function newEmployee() {
         type: "input",
         name: "empEmail",
         message: "Please enter the employee's e-mail address.",
-        choices: ["Intern", "Engineer"],
         //validate that an e-mail address was entered in proper form
         validate: validator.validateEMail,
       },
