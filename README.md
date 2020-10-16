@@ -31,7 +31,7 @@ Clone the GitHub repository.  And, run the file in VSCode.
 
 Type in "node app.js" in the terminal command line.  Follow the prompts.
 
-Here are :movie_camera: **VIDEOS** :movie_camera: that display how to use the application.
+Here are four :movie_camera: **VIDEOS** :movie_camera: that display how to use the application.
 
 1. ***TDD/OBJECTS*** walk through:
 
